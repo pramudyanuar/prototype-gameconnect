@@ -1,0 +1,161 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f1a; /* Warna latar utama yang sangat gelap */
+  background-image: url('../image/bg.png'); /* Pastikan path ini benar */
+  background-blend-mode: multiply; /* Membuat gambar latar lebih gelap dan menyatu */
+  background-size: 500px;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 420px;
+  background-color: #1c1c2d; /* Warna background form */
+  padding: 2.5rem;
+  border-radius: 1rem; /* 16px */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h2 {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+.form-container .subheading {
+  color: #a0a0b5; /* Warna abu-abu keunguan untuk subheading */
+  text-align: center;
+  margin-bottom: 2rem; /* 32px */
+  font-size: 0.9rem;
+}
+
+.form-label {
+  color: #a0a0b5;
+  font-size: 0.875rem; /* 14px */
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Penyesuaian untuk ikon di dalam input */
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .form-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem; /* 16px */
+  transform: translateY(-50%);
+  color: #a0a0b5;
+  pointer-events: none; /* Agar ikon tidak bisa diklik */
+}
+
+.form-control {
+  background-color: #2a2a3d;
+  border: 1px solid #404058;
+  color: #ffffff;
+  border-radius: 0.5rem; /* 8px */
+  padding: 0.8rem 1rem 0.8rem 3rem; /* Padding kiri untuk ruang ikon */
+  height: 50px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control::placeholder {
+  color: #6a6a81;
+}
+
+.form-control:focus {
+  background-color: #2a2a3d;
+  color: #ffffff;
+  border-color: #00a9ff;
+  box-shadow: 0 0 0 3px rgba(0, 169, 255, 0.2);
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+a {
+  color: #00a9ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #33c3ff;
+}
+
+.btn-custom {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #00f2fe, #0085ff);
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem; /* Spasi di atas tombol */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 172, 255, 0.25);
+}
+
+.bottom-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #a0a0b5;
+}
+
+.bottom-link a {
+  font-weight: 600;
+}
+
+/* Password Strength Bar */
+.password-strength {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.strength-bar {
+  flex-grow: 1;
+  height: 6px;
+  background-color: #2a2a3d;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.strength-level {
+  height: 100%;
+  width: 20%; /* Contoh untuk "Weak" */
+  background-color: #e63946; /* Merah untuk "Weak" */
+  border-radius: 3px;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.strength-text {
+  font-size: 0.75rem;
+  color: #a0a0b5;
+}
