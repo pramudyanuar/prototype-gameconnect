@@ -1,0 +1,105 @@
+/* =================================== */
+/* CSS Custom Properties (Variables)   */
+/* =================================== */
+:root {
+  --sidebar-bg: #1f2128;
+  --main-bg: #18191e;
+  --text-primary: #e6e6e6;
+  --text-secondary: #8c8f9a;
+  --accent-primary: #00aaff;
+  --accent-secondary: #00d5ff;
+  --border-color: #3a3f51;
+  --sidebar-width: 260px;
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* =================================== */
+/* General Reset & Body Styles         */
+/* =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--main-bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* =================================== */
+/* Dashboard Container Layout          */
+/* =================================== */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =================================== */
+/* Sidebar Styling                     */
+/* =================================== */
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background-color: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  border-right: 1px solid var(--border-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-header { margin-bottom: 30px; padding: 0 10px; }
+.logo { font-size: 24px; font-weight: 700; color: var(--text-primary); }
+.sidebar-nav { flex-grow: 1; overflow-y: auto; }
+.nav-list { display: flex; flex-direction: column; gap: 5px; }
+.nav-link { display: flex; align-items: center; padding: 12px 15px; border-radius: 8px; font-size: 15px; font-weight: 500; color: var(--text-secondary); transition: background-color 0.2s, color 0.2s; }
+.nav-link i { font-size: 18px; width: 35px; text-align: center; margin-right: 10px; transition: color 0.2s; }
+.nav-link:hover { background-color: rgba(255, 255, 255, 0.05); color: var(--text-primary); }
+.nav-link.active { color: var(--text-primary); font-weight: 600; background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); }
+.nav-link.active i { color: var(--text-primary); }
+.nav-section { margin-top: 25px; }
+.nav-section-title { font-size: 12px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; padding: 0 15px 10px 15px; }
+.sidebar-footer { padding-top: 20px; border-top: 1px solid var(--border-color); }
+.logout { color: #ff5252; }
+
+/* =================================== */
+/* Main Content Styling                */
+/* =================================== */
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-shrink: 0;
+}
+
+.content-header .header-left { display: flex; align-items: center; gap: 20px; }
+.content-header h1 { font-size: 28px; font-weight: 600; }
+.menu-toggle { display: none; background: none; border: none; color: var(--text-primary); font-size: 24px; cursor: pointer; }
+.content-body { flex-grow: 1; display: flex; }
+
+/* =================================== */
+/* Responsive Design (Mobile & Tablet) */
+/* =================================== */
+@media (max-width: 1024px) {
+  .sidebar { position: fixed; left: 0; top: 0; bottom: 0; z-index: 2000; transform: translateX(-100%); }
+  .sidebar.is-open { transform: translateX(0); }
+  .menu-toggle { display: block; }
+}
+@media (max-width: 768px) {
+  .main-content { padding: 20px; }
+}

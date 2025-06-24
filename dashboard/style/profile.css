@@ -1,0 +1,125 @@
+.profile-page {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  width: 100%;
+}
+.profile-sidebar,
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.profile-card {
+  background-color: var(--sidebar-bg);
+  padding: 30px;
+  border-radius: 12px;
+}
+.user-identity {
+  text-align: center;
+}
+.user-identity .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 3px solid var(--border-color);
+  object-fit: cover;
+}
+.user-identity .username {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.user-identity .email {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+.user-identity .edit-avatar-btn {
+  background: var(--accent-primary);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.profile-stats .stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.profile-stats .stat-item:last-child {
+  border-bottom: none;
+}
+.profile-stats .stat-label {
+  color: var(--text-secondary);
+}
+.profile-stats .stat-value {
+  font-weight: 600;
+}
+.form-card h3 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+.form-group input {
+  width: 100%;
+  background-color: #2b2e3c;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+.form-actions {
+  text-align: right;
+}
+.form-actions button {
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.form-message {
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-align: center;
+  display: none;
+}
+.form-message.success {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+.form-message.error {
+  background-color: rgba(255, 82, 82, 0.2);
+  color: #ff5252;
+}
+@media (max-width: 992px) {
+  .profile-page {
+    grid-template-columns: 1fr;
+  }
+}

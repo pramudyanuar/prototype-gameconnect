@@ -1,0 +1,130 @@
+/* dashboard/assets/css/notifications.css */
+
+.notifications-page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.notifications-header h1 {
+  font-size: 24px;
+}
+
+.notifications-header .actions button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.notifications-header .actions button:hover {
+  background-color: var(--sidebar-bg);
+  color: var(--text-primary);
+}
+.notifications-header .actions i {
+  margin-right: 8px;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-group {
+  margin-bottom: 30px;
+}
+
+.notification-group-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.notification-item:hover {
+  background-color: var(--sidebar-bg);
+}
+
+.notification-item.unread {
+  background-color: rgba(0, 170, 255, 0.08);
+}
+
+.notification-item .icon {
+  font-size: 20px;
+  color: var(--accent-primary);
+  width: 30px;
+  text-align: center;
+}
+
+.notification-item .content {
+  flex-grow: 1;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.notification-item .content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.notification-item .timestamp {
+  font-size: 13px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.notification-item.unread::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-secondary);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+.empty-state i {
+  font-size: 48px;
+  color: var(--accent-primary);
+  margin-bottom: 20px;
+}
+.empty-state h3 {
+  font-size: 20px;
+  color: var(--text-primary);
+}
+.empty-state p {
+  color: var(--text-secondary);
+}

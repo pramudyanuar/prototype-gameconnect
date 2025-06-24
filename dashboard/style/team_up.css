@@ -1,0 +1,111 @@
+/* dashboard/assets/css/team_up.css */
+.team-up-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.create-team-btn {
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.create-team-btn i {
+  margin-right: 8px;
+}
+.team-filters {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--sidebar-bg);
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+.team-filters .search-bar,
+.team-filters .filter-select {
+  background-color: var(--main-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.team-filters .search-bar {
+  flex-grow: 1;
+}
+.team-up-list-full {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.lfg-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--sidebar-bg);
+  border-radius: 12px;
+}
+.lfg-post .game-icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+.post-details {
+  flex-grow: 1;
+}
+.post-details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.post-details .tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.tags .tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.tags .tag.competitive {
+  background-color: rgba(255, 82, 82, 0.2);
+  color: #ff5252;
+}
+.tags .tag.casual {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+.posted-by {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.posted-by img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.post-actions {
+  text-align: right;
+}
+.post-actions .slots {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.post-actions .join-btn {
+  width: 100%;
+}
