@@ -1,0 +1,267 @@
+/* dashboard/style/explore.css */
+
+.explore-page {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) 1fr; /* Kolom utama lebih besar */
+  gap: 30px;
+}
+
+/* Kolom Konten Utama */
+.content-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ex-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.explore-nav {
+  display: flex;
+  gap: 10px;
+}
+.nav-btn {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+.nav-btn.active {
+  color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 10px rgba(0, 213, 255, 0.3);
+}
+.live-indicator {
+  color: #e91e63;
+  font-size: 8px;
+}
+
+.go-live-btn {
+  background: #e91e63; /* Warna merah/pink untuk Go Live */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Card Konten */
+.content-card {
+  background-color: var(--sidebar-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.thumbnail-container {
+  position: relative;
+}
+.thumbnail {
+  width: 100%;
+  display: block;
+}
+.thumbnail-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 10px;
+}
+.view-count,
+.live-tag,
+.watching-count {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.live-tag {
+  background-color: #e91e63;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.info-text {
+  flex-grow: 1;
+}
+.info-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.info-text p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.card-actions {
+  display: flex;
+  gap: 20px;
+}
+.action-item {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Sidebar Kanan */
+.explore-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-widget {
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+.sidebar-widget h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sidebar-tag {
+  background-color: #2b2e3c;
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sidebar-tag:hover {
+  color: var(--text-primary);
+}
+
+.creator-list,
+.upcoming-list {
+  list-style: none;
+  padding: 0;
+}
+.creator-item,
+.upcoming-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+.creator-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.creator-name {
+  flex-grow: 1;
+  font-weight: 500;
+}
+.game-tag,
+.live-tag.small {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.game-tag {
+  background-color: rgba(0, 170, 255, 0.1);
+  color: var(--accent-primary);
+}
+.live-tag.small {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.upcoming-list .upcoming-item i {
+  color: var(--text-secondary);
+  font-size: 16px;
+  width: 20px;
+}
+.stream-title {
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 14px;
+}
+.start-time {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .explore-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ex-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .explore-nav {
+    flex-wrap: wrap;
+  }
+
+  .card-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-btn {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .go-live-btn {
+      width: 100%;
+      justify-content: center;
+  }
+}

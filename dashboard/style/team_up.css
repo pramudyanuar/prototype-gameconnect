@@ -1,10 +1,15 @@
 /* dashboard/assets/css/team_up.css */
+.team-up-page {
+  width: 100%; /* <-- TAMBAHKAN BARIS INI */
+}
+
 .team-up-page .page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .create-team-btn {
   background: linear-gradient(
     90deg,
@@ -108,4 +113,29 @@
 }
 .post-actions .join-btn {
   width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .team-up-page .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .team-filters {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .lfg-post {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .post-actions {
+    width: 100%;
+    text-align: left;
+  }
 }

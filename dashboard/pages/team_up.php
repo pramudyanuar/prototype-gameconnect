@@ -11,12 +11,12 @@
     </div>
     <div class="team-up-list-full">
         <div class="lfg-post">
-            <div class="game-icon"><img src="https://i.imgur.com/3Y2mB1Q.png" alt="Game Icon"></div>
+            <div class="game-icon"><img src="https://picsum.photos/seed/game1/60/60" alt="Game Icon"></div>
             <div class="post-details">
-                <h3>Looking for 2 more for Apex Ranked</h3>
+                <h3>Looking for a fifth for Valorant Premier</h3>
                 <div class="tags">
                     <span class="tag competitive">Competitive</span>
-                    <span class="tag">Diamond+</span>
+                    <span class="tag">Radiant</span>
                     <span class="tag">Mic Required</span>
                 </div>
                 <div class="posted-by">
@@ -25,17 +25,17 @@
                 </div>
             </div>
             <div class="post-actions">
-                <div class="slots">2 / 3 Filled</div>
+                <div class="slots">2 / 5 Filled</div>
                 <button class="join-btn">Request to Join</button>
             </div>
         </div>
         <div class="lfg-post">
-            <div class="game-icon"><img src="https://i.imgur.com/W3Q7A3p.png" alt="Game Icon"></div>
+            <div class="game-icon"><img src="https://picsum.photos/seed/game2/60/60" alt="Game Icon"></div>
             <div class="post-details">
-                <h3>Casual Stellar Conquest run, new players welcome!</h3>
+                <h3>Chill Apex Legends squad for fun</h3>
                 <div class="tags">
                     <span class="tag casual">Casual</span>
-                    <span class="tag">Co-op</span>
+                    <span class="tag">Gold</span>
                 </div>
                 <div class="posted-by">
                     <img src="https://i.pravatar.cc/24?u=lunavortex" alt="avatar">

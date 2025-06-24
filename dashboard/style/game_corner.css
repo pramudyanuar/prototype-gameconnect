@@ -1,0 +1,284 @@
+/* dashboard/style/game_corner.css */
+
+.game-corner-page {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Header */
+.gc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.gc-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.upload-btn {
+  background: linear-gradient(90deg, #00aaff, #00d5ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 213, 255, 0.3);
+}
+
+/* Featured Section */
+.featured-games {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.featured-card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.featured-card h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.featured-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.featured-card .tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.featured-card .tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.tag.featured {
+  background-color: rgba(255, 82, 82, 0.3);
+  color: #ff5252;
+}
+.tag.in-dev {
+  background-color: rgba(255, 183, 77, 0.3);
+  color: #ffb74d;
+}
+.editors-pick .card-overlay {
+  background: linear-gradient(to top, rgba(19, 34, 51, 0.9), transparent);
+}
+.editors-pick .tag.editors {
+  background-color: var(--accent-primary);
+  color: #fff;
+}
+.editors-pick p.author {
+  margin-top: 5px;
+  font-weight: 600;
+  color: var(--accent-secondary);
+}
+.editors-pick h3 {
+  margin-top: 10px;
+  font-size: 28px;
+}
+.carousel-dots {
+  display: flex;
+  gap: 5px;
+  margin-top: 15px;
+}
+.carousel-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.carousel-dots span:first-child {
+  background-color: #fff;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.filter-btn {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  color: var(--text-primary);
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+/* Game Grid */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+.game-card {
+  background-color: var(--sidebar-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--border-color);
+}
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card-banner {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 15px;
+  flex-grow: 1;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.card-header h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffc107;
+}
+.developer {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+.description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 15px 15px;
+}
+.play-btn,
+.play-btn-alt {
+  flex-grow: 1;
+  margin-right: 10px;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.play-btn {
+  background: var(--accent-primary);
+  color: white;
+}
+.play-btn-alt {
+  background: #e91e63; /* Warna pink untuk tombol Turbo Drive */
+  color: white;
+}
+.card-actions {
+  display: flex;
+  gap: 5px;
+}
+.action-btn {
+  background: #2b2e3c;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .featured-games {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gc-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-btn {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .play-btn,
+  .play-btn-alt {
+    margin-right: 0;
+  }
+}

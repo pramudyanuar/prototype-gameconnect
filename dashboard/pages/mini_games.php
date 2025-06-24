@@ -8,7 +8,7 @@
     </div>
     <div class="minigames-grid">
         <a href="#" class="game-card">
-            <img src="https://i.imgur.com/8aVa4iV.png" alt="Tetris" class="card-banner">
+            <img src="https://picsum.photos/seed/tetris/280/150" alt="Tetris" class="card-banner">
             <div class="card-content">
                 <h3>Tetris</h3>
                 <p>The classic block-stacking puzzle. Clear lines to score!</p>
@@ -19,7 +19,7 @@
             </div>
         </a>
         <a href="#" class="game-card">
-            <img src="https://i.imgur.com/tH7z3bJ.png" alt="Sudoku" class="card-banner">
+            <img src="https://picsum.photos/seed/sudoku/280/150" alt="Sudoku" class="card-banner">
             <div class="card-content">
                 <h3>Sudoku</h3>
                 <p>A challenging number puzzle. Fill the 9x9 grid...</p>
@@ -30,7 +30,7 @@
             </div>
         </a>
         <a href="#" class="game-card">
-            <img src="https://i.imgur.com/nJg3Fj0.png" alt="Snake" class="card-banner">
+            <img src="https://picsum.photos/seed/snake/280/150" alt="Snake" class="card-banner">
             <div class="card-content">
                 <h3>Snake</h3>
                 <p>A timeless arcade classic. Eat, grow as long as you can...</p>
@@ -41,7 +41,7 @@
             </div>
         </a>
         <a href="#" class="game-card">
-            <img src="https://i.imgur.com/9C2C3Xm.png" alt="2048" class="card-banner">
+            <img src="https://picsum.photos/seed/2048/280/150" alt="2048" class="card-banner">
             <div class="card-content">
                 <h3>2048</h3>
                 <p>Slide and merge matching tiles to reach the 2048 tile.</p>
